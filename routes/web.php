@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/salut', function () {
+    return ('salut Philippe');
+});
+
+Route::get('/salut/{name}', function ($name) {
+    return "salut $name";
+});
+ 
+Route::get('/users', function () {
+
+	$users = DB::table('users')->get();
+
+        return view('child', ['users' => $users]);
+});
