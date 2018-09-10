@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,9 +15,9 @@ class CreateAdressesTable extends Migration
     {
         Schema::create('adresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->decimal('N°_de_rue', 8, 2);
+            $table->decimal('N°_de_rue', 8);
             $table->string('adresse');
-            $table->decimal('code_postal', 8, 2);
+            $table->decimal('code_postal', 8);
             $table->string('ville');
             $table->timestamps();
         });
